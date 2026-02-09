@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Ghost } from "lucide-react";
+import prisma from "@/lib/db"
 
-export default function Home() {
-  const something = true;
+export default async function Home () {
+  const users = await prisma.user.findMany();
   return (
     <div className="min-h-screen min-w-screen 
     flex items-center justify-center">
       <Button variant="secondary" >
-        Click me
+         {JSON.stringify(users)} 
       </Button>
     </div>
   )
