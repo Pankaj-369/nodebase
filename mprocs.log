@@ -11,3 +11,17 @@ ERROR [portable_pty::win::psuedocon] CreateProcessW `"pwsh.exe -Command aaca\0"`
 ERROR [lib::mprocs] Got panic. @info:panicked at C:\dev\mprocs\src\app.rs:1119:10:
 not yet implemented
 @stackTrace:disabled backtrace
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [lib::error] Error: channel closed
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"\"C:\\Program Files\\nodejs\\npm\" run inngest:dev\0"` in cwd `Some("C:\\Users\\pc\\Desktop\\notes\\nodebase\0")` failed: %1 is not a valid Win32 application. (os error 193)
