@@ -2,48 +2,63 @@ import prisma from "@/lib/db";
 import { inngest } from "./client";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
-import {createOpenAI} from "@ai-sdk/openai"
-import {createAnthropic} from "@ai-sdk/anthropic"
+import { createOpenAI } from "@ai-sdk/openai"
+import { createAnthropic } from "@ai-sdk/anthropic"
 
 const google = createGoogleGenerativeAI();
 const openai = createOpenAI();
-const anthropic =createAnthropic();
+const anthropic = createAnthropic();
 
 export const execute = inngest.createFunction(
   { id: "execute-ai" },
   { event: "execute/ai" },
   async ({ event, step }) => {
 
-    await step.sleep("pretend","5s");
+    await step.sleep("pretend", "5s");
 
-   const {steps: geminiSteps} = await step.ai.wrap("gemini-generate-text",
-    generateText,{
-      model:google("gemini-2.5-flash"),
-      system:"You are a helpful assistant.",
-      prompt:"What is 2 + 2?",
+    const { steps: geminiSteps } = await step.ai.wrap("gemini-generate-text",
+      generateText, {
+      model: google("gemini-2.5-flash"),
+      system: "You are a helpful assistant.",
+      prompt: "What is 2 + 2?",
+      experimental_telemetry: {
+        isEnabled: true,
+        recordInputs: true,
+        recordOutputs: true,
+      },
     }
-   );
+    );
 
-   const {steps: openaiSteps} = await step.ai.wrap("opeAi-generate-text",
-    generateText,{
+    const { steps: openaiSteps } = await step.ai.wrap("opeAi-generate-text",
+      generateText, {
       model: openai("gpt-4"),
-      system:"You are a helpful assistant.",
-      prompt:"What is 2 + 2?",
+      system: "You are a helpful assistant.",
+      prompt: "What is 2 + 2?",
+      experimental_telemetry: {
+        isEnabled: true,
+        recordInputs: true,
+        recordOutputs: true,
+      },
     }
-   );
+    );
 
-   const {steps: anthropicSteps} = await step.ai.wrap("Anthropic-generate-text",
-    generateText,{
+    const { steps: anthropicSteps } = await step.ai.wrap("Anthropic-generate-text",
+      generateText, {
       model: anthropic("claude-opus-4-5"),
-      system:"You are a helpful assistant.",
-      prompt:"What is 2 + 2?",
+      system: "You are a helpful assistant.",
+      prompt: "What is 2 + 2?",
+      experimental_telemetry: {
+        isEnabled: true,
+        recordInputs: true,
+        recordOutputs: true,
+      },
     }
-   );
+    );
 
-   return {
-    geminiSteps,
-    openaiSteps,
-    anthropicSteps
-   };
+    return {
+      geminiSteps,
+      openaiSteps,
+      anthropicSteps
+    };
   },
 );
